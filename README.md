@@ -1,5 +1,3 @@
-# TP_Singe
-# Project
 ## Atlani Samuel
 ---
 TP Wireframe
