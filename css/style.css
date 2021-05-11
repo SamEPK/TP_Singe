@@ -1,0 +1,315 @@
+/* reset css */
+/* pas travailler en px ni em */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: #ffddb0;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+/* theme css */
+
+:root{
+    --default-color: #222;
+    --background-color-header: #EBF7E3;
+    --main-color: #9BD770;
+    --middle-color: #375F1B;
+    --color-text: #fff;
+}
+
+/*navbar*/
+nav{
+    height: 7rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    background: linear-gradient(180deg, rgb(1, 92, 23) 0%, rgba(0,145,27,1) 100%);
+}
+nav img{
+    transform: rotateY(180deg);
+}
+nav ul{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction:row;
+}
+nav ul li{
+   margin: 0 3rem;
+   background-color: rgb(240, 240, 240);
+   padding: 1.5rem;
+   border-radius:2.5rem;
+   box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.514);
+}
+nav ul li a{
+    font-weight: bold;
+    font-size:1.9rem;
+    padding: 3rem;
+}
+nav ul img{
+    height: 5rem;
+}
+ul li:first-child{
+    height: 5rem;
+    padding: 0;
+    box-shadow: inherit;
+    border-radius: 0;   
+    background-color: inherit; 
+}
+/*banner*/
+
+.banner{
+    background: url(../asset/JungleG.jpg);
+    height: 30rem;
+    box-shadow: 0px 0px 19px 1px rgba(37, 78, 18, 0.79);
+}
+.banner h2{
+    color: #000000;
+    font-weight: bold;
+    background-color: rgb(8, 145, 38);
+    box-shadow: 0px 0px 19px 1px rgba(37, 78, 18, 0.79);
+    padding:1.5rem 3rem;
+    opacity: 0.9;
+    text-align: center;
+    position: relative;
+    top: 35%;
+    line-height: 3rem;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    transition: .5s;
+}
+.banner h2:hover{
+    transform:scale(1.2);
+    transition: .5s;
+}
+header figure img{
+    max-width: 100%;
+    border-bottom: solid .4rem #2e4900;
+    border-top: solid .4rem #1c2c00;
+    box-shadow: 0px 0px 19px 1px rgba(37, 78, 18, 0.79);
+    display: block;
+}
+header figure figcaption h1{
+    color: #000000;
+    font-weight: bold;
+    background-color: rgb(10, 240, 171);
+    box-shadow: 0px 0px 19px 1px rgba(37, 78, 18, 0.79);
+    position: absolute;
+    padding:1.5rem 3rem;
+    top: 40%;
+    left: 45%;
+    line-height: 3rem;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    transition: .5s;
+}
+header figure figcaption h1:hover{
+    transform:scale(1.2);
+    transition: .5s;
+}
+header figure {
+    position: relative;
+}
+header h1, footer p, section h3{
+    font-weight: 300;
+    text-align: center;
+    line-height: 6.5rem;
+    background-color: inherit;
+}
+
+.article_of{
+   position: relative;
+   height: 0; /* les articles cachés */
+   opacity: 0;
+   z-index: -1;
+   overflow: hidden;
+   transition: all .6s ease-in-out;
+}
+.article_on{
+    opacity: 1;
+    z-index: 1;
+    height: initial;
+}
+
+
+figure figcaption h2::before{
+    content: url("../asset/edit-2.svg");
+    vertical-align: middle;
+}
+main figure{
+    display: grid;
+    max-width: 80rem;
+    margin: 2rem auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    border: 9px outset #17A42D;
+    border-radius: 0px 23px 0px 23px;
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.34);
+    background-color: #b8b8b8;
+    padding: 3rem;
+
+}
+main figure figcaption{
+    padding: 0rem 1rem 1rem 1rem;
+}
+main figure figcaption h2{
+    color:rgb(32, 56, 16);
+    font-weight: 400;
+}
+main figure img{
+    order: 1;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.452);
+}
+main figure figcaption h2,main figure figcaption p{
+    padding: 0rem 0rem 1rem 1rem;
+
+}
+main figure figcaption time{
+    padding: 1rem;
+    display: block;
+    color: rgb(92, 89, 89);
+    font-style: italic;
+    font-size: small;
+}
+main figure figcaption p{
+    line-height: 2.6rem;
+    padding-top: 0;
+}
+/* suite des article */
+main figure:nth-child(2n + 2) figcaption{
+    order: 1;
+}
+main .btn-add{
+    font-size: initial;
+    padding: 1rem;
+    display: block;
+    width: 20rem;
+    text-align: center;
+    border: solid .1rem #222;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+main .btn-add::before{
+    content:'+ ADD MORE';
+}
+main .btn-remove::before{
+    content:'- LESS ARTICLE';
+}
+
+details{
+    max-width: 80rem;
+    margin:1rem auto;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background-color: #c2c2c2;
+    border: solid .2rem rgb(16, 95, 0);
+}
+details summary{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+details summary::-webkit-details-marker{
+    display: none;
+}
+details summary::before{
+    display: inline-block;
+    content: "\203A";
+    margin-right: .5rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+}
+details[open] summary::before{
+    content: "\203A";
+    transform: rotate(90deg);
+}
+details ul{
+    line-height: 3.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.icon{
+    height: 5rem;
+    margin-left: 1.5rem;
+    margin-bottom: -9.5rem;
+}
+/* responsive */
+@media only screen and (max-width: 40rem){
+
+    main figure{
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 0%;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    main figure:nth-child(2n + 2) figcaption{
+        order:initial;
+    }
+    nav{
+        display: block;
+        height: 5.5rem;
+    }
+    nav img:last-child{
+        margin: 0 auto;
+    }
+    nav ul li{
+        display: flex;
+        margin: 0 1rem;
+        box-shadow: none;
+    }
+    nav ul li a{
+        font-size: 1rem;
+        padding: 0;
+
+    }
+    main figure{
+        margin: 2rem auto;
+    }
+    .icon1{
+        height: 5rem;        
+    }
+}
+@media screen and (orientation:landscape){
+    main figure{
+        grid-template-columns: repeat(2, 1fr);
+        }
+        header h1{
+            font-size: xx-large;
+        }
+        main figure:nth-child(2n + 2) figcaption{
+            order: 1;
+        }
+        nav ul li{
+            margin: 1rem;
+            max-width: 50%;
+        }
+
+}
